@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📝 Language Quiz</h2>
+
+        <form method="POST">
+            <p>1. Hello in Spanish?</p>
+            <input type="text" name="q1" required>
+
+            <p>2. Goodbye in Spanish?</p>
+            <input type="text" name="q2" required>
+
+            <button>Submit</button>
+        </form>
+
+        {% if score is defined %}
+            <h3>Your Score: {{ score }}/2</h3>
+
+            {% if score == 2 %}
+                <p>🔥 Excellent!</p>
+            {% else %}
+                <p>👍 Keep Practicing</p>
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
